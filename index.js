@@ -160,7 +160,7 @@ window.addEventListener('load', async () => {
       documentation: persons.documentation,
       price: persons.price,
       link : persons.link,
-      timestamp : persons.timestamp
+      timestamp : new Date(persons.timestamp)
     })
 
     // vote
