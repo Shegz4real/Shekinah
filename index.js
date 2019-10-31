@@ -158,7 +158,9 @@ window.addEventListener('load', async () => {
 
       name: persons.name,
       documentation: persons.documentation,
-      price: persons.price
+      price: persons.price,
+      link : persons.link,
+      timestamp : persons.timestamp
     })
 
     // vote
