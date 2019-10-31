@@ -218,7 +218,7 @@ $('#regBtn').click(async function(){
   console.log("pric:",Project_price)
   console.log("link:",Project_link)
 
-  const new_Project = await contractCall('createProject', [Project_name, Project_price, Project_images,Project_description, Project_link],parseInt(Project_price, 10));
+  const new_Project = await contractCall('addProject', [Project_name, Project_price, Project_images,Project_description, Project_link],parseInt(Project_price, 10));
   console.log("SAVED TO THE DB", new_Project)
 
   ProjectArray.push({
