@@ -9,7 +9,7 @@
     <meta name="robots" content="all,follow">
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/register.css">
+    <!-- <link rel="stylesheet" href="css/register.css"> -->
     <!-- Font Awesome CSS-->
     <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
     <!-- Custom icon font-->
@@ -149,60 +149,50 @@
                           </div>
                         </div>
                         <!-- Registration Form -->
-                        <div class="col-sm-6 col-xs-12">
-                          <div class="row">
-                            <div class="col-xs-12">
-                              <form id="signupForm" method="post" accept-charset="UTF-8" validate>
-                                <div class="input-group">
-                                  <span class="input-group-addon"><i class="fa fa-user-secret icon-2x"></i></i></span>
-                                  <input id="name" class="form-control input-lg" placeholder="Full Name" maxlength="100" type="text" name="name">
+                        <section>
+                            <div class="container">
+                              <div class="row justify-content-center">
+                                <div class="col-12 col-md-8 col-lg-8 col-xl-6">
+                                  <div class="row">
+                                    <div class="col text-center">
+                                      <h1>Register</h1>
+                                      <p class="text-h3">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia. </p>
+                                    </div>
+                                  </div>
+                                  <div class="row align-items-center">
+                                    <div class="col mt-4">
+                                      <input type="text" class="form-control" placeholder="Company Name">
+                                    </div>
+                                  </div>
+                                  <div class="row align-items-center mt-4">
+                                    <div class="col">
+                                      <input type="email" class="form-control" placeholder="Email">
+                                    </div>
+                                  </div>
+                                  <div class="row align-items-center mt-4">
+                                    <div class="col">
+                                      <input type="password" class="form-control" placeholder="Password">
+                                    </div>
+                                    <div class="col">
+                                      <input type="password" class="form-control" placeholder="Confirm Password">
+                                    </div>
+                                  </div>
+                                  <div class="row justify-content-start mt-4">
+                                    <div class="col">
+                                      <div class="form-check">
+                                        <label class="form-check-label">
+                                          <input type="checkbox" class="form-check-input">
+                                          I Read and Accept <a href="https://www.froala.com">Terms and Conditions</a>
+                                        </label>
+                                      </div>
+                        
+                                      <button class="btn btn-primary mt-4">Submit</button>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="input-group">
-                                  <span class="input-group-addon"><i class="icon-user icon-2x"></i></span>
-                                  <input id="handle" class="form-control input-lg" placeholder="Username" maxlength="100" type="text" name="handle">
-                                </div>
-                                <div class="input-group">
-                                  <span class="input-group-addon"><i class="icon-envelope icon-2x"></i></span>
-                                  <input id="email" class="form-control input-lg" placeholder="Email" maxlength="100" type="email" name="email" validate>
-                                </div>
-                                <div class="input-group">
-                                  <span class="input-group-addon"><i class="icon-asterisk icon-2x"></i></span>
-                                  <input id="password" class="form-control input-lg" placeholder="Password" maxlength="60" type="password" name="password">
-                                </div>
-                                <div class="input-group">
-                                  <span class="input-group-addon"><i class="icon-asterisk icon-2x"></i></span>
-                                  <input id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" maxlength="60" type="password" name="password_confirmation">
-                                </div>
-                                <div class="form-group">
-                                  <div class="g-recaptcha" data-sitekey="6LdJRxETAAAAABZT0MUNO1r5at_-JuSGeAPTqIM6"></div>
-                                </div>
-                                <div class="form-group">
-                                  <button type="submit" id="btn-signup" class="btn btn-block btn-primary btn-lg">Sign Up</button>
-                                </div>
-                              </form>
-                              <div class="form-group">
-                                <div class="topCushion">Already a member? <a href="#">Login</a></div>
                               </div>
                             </div>
-                            <!-- /.col-xs-12 -->
-                          </div>
-                          <!-- /.row -->
-                        </div>
-                        <!-- /.col-sm-6 col-xs-12 -->
-                      </div>
-                      <!-- /.row -->
-                    </div>
-                    <!-- /.well well-lg -->
-                  </section>
-                  <!-- /.col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-xs-12 col-sm-offset-0 -->
-                </div>
-                <!-- /.row -->
-              </div>
-              <!-- /#realContent -->
-            </div>
-            <!-- /.row -->
-          </div>
-          <!-- /#contentContainer -->
+                          </section>
     </section>
     <!-- Latest Posts -->
     <!-- <section class="latest-posts"> 
@@ -386,6 +376,6 @@
     <script src="https://unpkg.com/@aeternity/aepp-sdk/dist/aepp-sdk.browser-script.js"></script>
     
     <script src="index.js"></script>
-    <script src="js/register.js"></script>
+    <!-- <script src="js/register.js"></script> -->
   </body>
 </html>
