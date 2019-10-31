@@ -204,51 +204,50 @@ window.addEventListener('load', async () => {
 //   $("#loading-bar-spinner").hide();
 // });
 
-// $('.regBtn').click(async function(){
-//   $("#loading-bar-spinner").show();
-//   console.log("Button Clicked")
-//   const Project_name = ($('#Projectname').val());
-//   const Project_image1 = ($("#Projectimage1").val());
-//   const Project_image2 = ($("#Projectimage2").val());
-//   const Project_image3 = ($("#Projectimage3").val());
-//   const Project_description = ($("#Projectmessage").val());
-//   console.log("-------------------------------------")
-//   console.log("Name:",Project_name)
-//   console.log("image1:",Project_image1)
-//   console.log("Image2:",Project_image2)
-//   console.log("Image3:",Project_image3)
+$('#regBtn').click(async function(){
+  $("#loading-bar-spinner").show();
+  console.log("Button Clicked")
+  const Project_name = ($('#Username').val());
+  const Project_images = ($("#imagelink").val());
+  const Project_description = ($("#projectdescription").val());
+  const Project_price = ($('#price').val());
+  const Project_link = ($('#projectlink').val());
+  console.log("-------------------------------------")
+  console.log("Name:",Project_name)
+  console.log("images:",Project_images)
+  console.log("pric:",Project_price)
+  console.log("link:",Project_link)
 
-//   const new_Project = await contractCall('createProject', [Project_image1, Project_image2, Project_image3,Project_name,Project_description],40000);
-//   console.log("SAVED TO THE DB", new_Project)
+  const new_Project = await contractCall('createProject', [Project_name, Project_price, Project_images,Project_description, Project_link],parseInt(Project_price, 10));
+  console.log("SAVED TO THE DB", new_Project)
 
-//   ProjectArray.push({
-//     id: new_Project.id,
-//     image1: new_Project.image1,
-//     image2: new_Project.image2,
-//     image3: new_Project.image3,
+  ProjectArray.push({
+    id: new_Project.id,
+    images: new_Project.images,
 
-//     name: new_Project.name,
-//     description: new_Project.description,
-//     voteCount: new_Project.voteCount
-//   })
+    name: new_Project.name,
+    description: new_Project.description,
+    link: new_Project.link,
+    price : new_Project.price
+  })
 
 
-//   renderProductList();
+  renderProductList();
   
-//     //This will clear the value in all scenarious
-//     var name_input = document.getElementById("name")
-//         name_input.value =""
-//     var image_input = document.getElementById("image1")
-//         url_input.value =""
-//     var image_input = document.getElementById("image2")
-//        image_input.value = ""
-//     var image_input = document.getElementById("image3")
-//        image_input.value = ""
-//     var image_input = document.getElementById("message")
-//        image_input.value = ""
-//   // e.preventDefault();
+    //This will clear the value in all scenarious
+    var name_input = document.getElementById("Username")
+        name_input.value =""
+    var image_input = document.getElementById("imagelink")
+        url_input.value =""
+    var image_input = document.getElementById("projectdescription")
+       image_input.value = ""
+    var image_input = document.getElementById("price")
+       image_input.value = ""
+    var image_input = document.getElementById("projectlink")
+       image_input.value = ""
+  // e.preventDefault();
 
-//   $("#loading-bar-spinner").hide();
-//   location.reload(true)
+  $("#loading-bar-spinner").hide();
+  location.reload(true)
 
-// });
+});
