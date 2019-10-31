@@ -260,12 +260,13 @@
 
     <!-- JavaScript files-->
     <script id="template" type="x-tmpl-mustache">
+      {{#ProjectArray}}
         <div class="row d-flex align-items-stretch">
             <div class="text col-lg-7">
               <div class="text-inner d-flex align-items-center">
                 <div class="content">
                   <header class="post-header">
-                    <div class="category"><a href="#">Business</a><a href="#">Project</a></div><a href="post.html">
+                    <div class="category"><a href="#">{{name}}</a><a href="#">Project</a></div><a href="post.html">
                       <h2 class="h4">{{name}} built this project</h2></a>
                   </header>
                   <p>{{documentation}}.</p>
@@ -280,6 +281,7 @@
             </div>
             <div class="image col-lg-5"><img src="img/featured-pic-1.jpeg" alt="..."></div>
           </div>
+          {{/ProjectArray}}
       
 
     </script>
