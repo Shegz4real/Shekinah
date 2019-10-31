@@ -87,7 +87,7 @@ var ProjectLength = 0;
 
 
 
-function renderProduct() {
+function renderProject() {
   ProjectArray = ProjectArray.sort(function (a, b) {
     return b.Price - a.Price
   })
@@ -170,7 +170,7 @@ window.addEventListener('load', async () => {
     //     });
     //   });
     // }
-    renderProduct();
+    renderProject();
     $("#loading-bar-spinner").hide();
   }
 });
@@ -200,7 +200,7 @@ window.addEventListener('load', async () => {
   
 
 
-//   renderProduct();
+//   renderProject();
 //   $("#loading-bar-spinner").hide();
 // });
 
@@ -232,7 +232,7 @@ $('#regBtn').click(async function(){
   })
 
 
-  renderProductList();
+  renderProject();
   
     //This will clear the value in all scenarious
     var name_input = document.getElementById("Username")
