@@ -28,7 +28,7 @@ contract Projectify =
   entrypoint getProjectLength() : int = 
     state.projectLength
   
-  stateful entrypoint addProject(_name:string, _price:int, _images:string, _documentation : string, _link : string ) =
+  payable stateful entrypoint addProject(_name:string, _price:int, _images:string, _documentation : string, _link : string ) =
     let newProject = {id=getProjectLength() + 1, name=_name, price=_price, documentation = _documentation, link = _link, images=_images,purchased=false, owner=Call.caller, timestamp = Chain.timestamp}
     let index = getProjectLength() + 1
     put(state{projects[index] = newProject , projectLength  = index})

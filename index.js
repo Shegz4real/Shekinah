@@ -31,7 +31,7 @@ contract Projectify =
   entrypoint getProjectLength() : int = 
     state.projectLength
   
-  stateful entrypoint addProject(_name:string, _price:int, _images:string, _documentation : string, _link : string ) =
+  payable stateful entrypoint addProject(_name:string, _price:int, _images:string, _documentation : string, _link : string ) =
     let newProject = {id=getProjectLength() + 1, name=_name, price=_price, documentation = _documentation, link = _link, images=_images,purchased=false, owner=Call.caller, timestamp = Chain.timestamp}
     let index = getProjectLength() + 1
     put(state{projects[index] = newProject , projectLength  = index})
@@ -80,7 +80,7 @@ contract Projectify =
     `;
 
 
-const contractAddress = 'ct_nmSzAJxT7LWzEMhD4KGSr9xXTeMWpAWNzkLPisSdm7sTuRFfx';
+const contractAddress = 'ct_7UDAct1WNutBfm8A9Eqf644jSAZF6ecZ3M6dALWwHLwfbxb1R';
 var ProjectArray = [];
 var client = null;
 var ProjectLength = 0;
